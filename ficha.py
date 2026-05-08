@@ -24,4 +24,40 @@ def ficha():
     #   - Código secreto: nombre invertido en mayúsculas
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
-    pass
+    Nombre = input()
+    NombreS = Nombre.strip()
+    NombreT = NombreS.title()
+    NombreL = NombreS.lower()
+    Email = input()
+    Emailm = Email.lower()
+    Nota1 = int(input())
+    Nota2 = int(input())
+    Nota3 = int(input())
+    print('''========================
+    FICHA DEL ALUMNO
+========================''')
+    print(f'Nombre: {NombreT}')
+    print(f'Email: {Email.lower()}')
+    print(f'Caracteres en nombre: {len(NombreT)}')
+    Espacio = NombreT.find(' ')
+    I_N = NombreT[0]
+    I_A = NombreT[Espacio+1]
+    print(f'Iniciales: {I_N}{I_A}')
+    nombrem = Nombre.lower()
+    EspacioU = NombreL.find(' ')
+    print(f'Usuario: {NombreL[EspacioU+1:]}.{NombreL[:EspacioU]}')
+    print(f"Email valido: {'@' in Email}")
+    donde_arroba = Emailm.find('@')
+    print(f'Dominio: {Emailm[donde_arroba+1:]}')
+    print(f"Nombre para archivo: {NombreT.replace(' ','_')}")
+    print(f"Cantidad de a: {NombreL.count('a')}")
+    NombreI = NombreS[::-1]
+    print(f'Codigo secreto: {NombreI.upper()}')
+    print(f'Nota 1: {Nota1}')
+    print(f'Nota 2: {Nota2}')
+    print(f'Nota 3: {Nota3}')
+    print(f'Suma: {Nota1 + Nota2 + Nota3}')
+    print(f'Promedio: {(Nota1 + Nota2 + Nota3)/3}')
+    print(f'Promedio entero: {int((Nota1 + Nota2 + Nota3)/3)}')
+    print('========================')
+
